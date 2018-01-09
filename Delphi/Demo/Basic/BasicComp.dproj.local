@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/01/02 10:21:20.000.986,E:\DATA\2017_GRIDSYSTEM\Experimental\PXL\Delphi\VCL\Comps\Basic\MainFrm.pas=C:\Users\Vincent\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/01/02 10:21:20.000.986,E:\DATA\2017_GRIDSYSTEM\Experimental\PXL\Delphi\VCL\Comps\Basic\MainFrm.dfm=C:\Users\Vincent\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2018/01/02 10:21:27.000.313,E:\DATA\2017_GRIDSYSTEM\Experimental\PXL\Delphi\VCL\Comps\Basic\BasicComp.dproj=C:\Users\Vincent\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A533DDE8-FE1A-49B2-ADB1-DB768B0072B7}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Package\Delphi10.2\PXLDelphiRT_VCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demo\Basic\BasicComp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demo\Surface\SurfaceComp.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PXLDelphiRT_VCL">
+        <MSBuild Projects="Package\Delphi10.2\PXLDelphiRT_VCL.dproj"/>
+    </Target>
+    <Target Name="PXLDelphiRT_VCL:Clean">
+        <MSBuild Projects="Package\Delphi10.2\PXLDelphiRT_VCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PXLDelphiRT_VCL:Make">
+        <MSBuild Projects="Package\Delphi10.2\PXLDelphiRT_VCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BasicComp">
+        <MSBuild Projects="Demo\Basic\BasicComp.dproj"/>
+    </Target>
+    <Target Name="BasicComp:Clean">
+        <MSBuild Projects="Demo\Basic\BasicComp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BasicComp:Make">
+        <MSBuild Projects="Demo\Basic\BasicComp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SurfaceComp">
+        <MSBuild Projects="Demo\Surface\SurfaceComp.dproj"/>
+    </Target>
+    <Target Name="SurfaceComp:Clean">
+        <MSBuild Projects="Demo\Surface\SurfaceComp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SurfaceComp:Make">
+        <MSBuild Projects="Demo\Surface\SurfaceComp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PXLDelphiRT_VCL;BasicComp;SurfaceComp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PXLDelphiRT_VCL:Clean;BasicComp:Clean;SurfaceComp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PXLDelphiRT_VCL:Make;BasicComp:Make;SurfaceComp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
