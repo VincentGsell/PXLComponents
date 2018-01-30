@@ -10,8 +10,6 @@ Wrapper component for PXL graphics library
 PXL components aims to be a Wrapper for the PXL library, create by Yuriy Kotsarenko.
 The goal is to put a "relative" easy way to develop in a RAD manner.
 
-This lib should be, on term , available for all PXL platform, under compiler FPC 3.0+ DCC18+ (And Lazarus1.4+ and DelphiXE7+ IDE)
-
 Detail on PXL library be find here : 
 http://www.asphyre.net/products/pxl
 
@@ -26,6 +24,13 @@ http://asphyre.sourceforge.net
 - Capability to manage Assets inside IDE, inside final EXE.
 - Capability to manage with zero (0) code complexe scene layout.
 - Delphi IDE And Lazarus IDE integration
+
+#RoadMap : 
+This lib should be, on term , available for all PXL platform, starting compiler FPC 3.0+ DCC18+ (And Lazarus1.4+ and DelphiXE7+ IDE)
+- fix and strongify existing code on delphi version.
+- Adapt for lazarus
+- Cross compilation ready for rasp.
+- Add tools.
 
 #Documentation
 ...coming
