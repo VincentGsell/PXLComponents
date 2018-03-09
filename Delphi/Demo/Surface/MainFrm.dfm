@@ -2,8 +2,8 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 512
-  ClientWidth = 512
+  ClientHeight = 656
+  ClientWidth = 1051
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object Form2: TForm2
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 506
-    Height = 506
+    Width = 1045
+    Height = 650
     ParentCustomHint = False
     StandaloneSurface = False
     Surface = PXLSurface1
@@ -28,6 +28,8 @@ object Form2: TForm2
     OffsetX = 0
     OffsetY = 0
     Align = alClient
+    ExplicitWidth = 502
+    ExplicitHeight = 567
   end
   object PXLSurface1: TPXLSurface
     Width = 512
@@ -62,7 +64,7 @@ object Form2: TForm2
     Top = 128
   end
   object PXLProcessorImage1: TPXLProcessorImage
-    DisplayName = 'Unnamed'
+    DisplayName = 'Koala'#39's Image '
     Assets = PXLAssets1
     AssetUsualName = 'Koala'
     Alpha = 100
@@ -19757,7 +19759,7 @@ object Form2: TForm2
     Top = 232
   end
   object PXLProcessorImage2: TPXLProcessorImage
-    DisplayName = 'Unnamed'
+    DisplayName = 'Lenna'#39's image'
     Assets = PXLAssets1
     AssetUsualName = 'Lenna'
     Alpha = 150

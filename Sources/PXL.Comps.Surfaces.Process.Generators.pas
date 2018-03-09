@@ -441,7 +441,7 @@ begin
 
     for J :=0 to PlasmaGun.Width-1 do
     begin
-      inc(Cardinal(Pixel),4);
+      inc(NativeInt(Pixel),4);
 
       Pixel.Red :=Round((sinHalfTable[X[0]] + sinOneTable[X[1]] + sinTwoTable[X[2]] + sinFourTable[X[3]]) +
                       (sinHalfTable[Y[0]] + sinOneTable[Y[1]] + sinTwoTable[Y[2]] + sinFourTable[Y[3]])) SHR 3;
@@ -459,7 +459,7 @@ begin
       end;
     end;
     Pixel := PlasmaGun.Bits;
-    inc(Cardinal(Pixel),PlasmaGun.Width * I * PlasmaGun.BytesPerPixel);
+    inc(NativeInt(Pixel),PlasmaGun.Width * I * PlasmaGun.BytesPerPixel);
 
     // increment the y values
     for C:=0 to 3 do
