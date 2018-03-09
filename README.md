@@ -1,10 +1,6 @@
 # PXLComponents
 Wrapper component for PXL graphics library
 
-***Warning : Very early version
-***Warning : Very early version
-***Warning : Very early version
-
 # Introduction
 
 PXL components aims to be a Wrapper for the PXL library, create by Yuriy Kotsarenko.
@@ -14,7 +10,7 @@ Detail on PXL library be find here :
 http://www.asphyre.net/products/pxl
 
 Source is available currently on SourceForge 
-http://asphyre.sourceforge.net
+https://svn.code.sf.net/p/asphyre/code/
 
 ## Feature
 - PXL Lib as magic under the wood.
@@ -23,23 +19,23 @@ http://asphyre.sourceforge.net
 - PXLSurface give access to raw DIB independant Bitmap
 - Capability to manage Assets inside IDE, inside final EXE.
 - Capability to manage with zero (0) code complexe scene layout.
-- Delphi IDE And Lazarus IDE integration
+- Delphi IDE integration
 
 ## RoadMap : 
 
 This lib should be, on term , available for all PXL platform, starting compiler FPC 3.0+ DCC18+ (And Lazarus1.4+ and DelphiXE7+ IDE)
 - fix and strongify existing code on delphi version.
 - Adapt for lazarus
-- Cross compilation ready for rasp.
+- Cross compilation ready for raspberry.
 - Add tools.
 
-## Documentation
-...coming
+## Note about Compilation :
 
-## Demo
-...Coming
-
-#Show me the source...
+- Dependancy : [PXL lib](https://svn.code.sf.net/p/asphyre/code/)
+- Compile and install the package in standart way. Do not forget to add path of the compiled unit in your delphi IDE (Tools/options)
+- In order to obtain a fully functional Software Rasterizer engine, please activate conditional define "SRT_RENDER_TO_GDI"
+(located in PCL.Devices.SRT.pas, line 20)
+- Without that, all is functionnal, but not the RasterEngine. Please note that the device rendering part of the rasterengine is available only on windows.
 
 ## ScreenShots : Delphi 10.2 IDE
 
