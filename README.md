@@ -6,11 +6,8 @@ Wrapper component for PXL graphics library
 PXL components aims to be a Wrapper for the PXL library, create by Yuriy Kotsarenko.
 The goal is to put a "relative" easy way to develop in a RAD manner.
 
-Detail on PXL library be find here : 
-http://www.asphyre.net/products/pxl
-
-Source is available currently on SourceForge 
-https://svn.code.sf.net/p/asphyre/code/
+Detail on PXL library be find [here](http://www.asphyre.net/products/pxl).
+Source is available currently on [SourceForge](https://svn.code.sf.net/p/asphyre/code/)
 
 ## Feature
 - PXL Lib as magic under the wood.
