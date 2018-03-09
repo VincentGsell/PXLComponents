@@ -32,7 +32,7 @@ This lib should be, on term , available for all PXL platform, starting compiler 
 - Compile and install the package in standart way. Do not forget to add path of the compiled unit in your delphi IDE (Tools/options)
 - In order to obtain a fully functional Software Rasterizer engine, please activate conditional define "SRT_RENDER_TO_GDI"
 (located in PCL.Devices.SRT.pas, line 20)
-- Without that, all is functionnal, but not the RasterEngine. Please note that the device rendering part of the rasterengine is available only on windows.
+- Without that, all is functionnal, but not the RasterEngine, thus, the delphi IDE will not display design time action at all. Please note that the device rendering part of the rasterengine is available only on windows.
 
 ## ScreenShots : Delphi 10.2 IDE
 
