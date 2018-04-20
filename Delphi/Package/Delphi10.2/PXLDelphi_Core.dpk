@@ -1,4 +1,4 @@
-package PXLDelphiRT_VCL;
+package PXLDelphi_Core;
 
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
@@ -23,18 +23,19 @@ package PXLDelphiRT_VCL;
 {$WRITEABLECONST OFF}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
-{$DEFINE DEFINE_SRT_RENDER_GDI SRT_RENDER_TO_GDI_ENABLED}
 {$DEFINE DEBUG}
 {$ENDIF IMPLICITBUILDING}
 {$IMPLICITBUILD ON}
 
 requires
-  rtl,
-  vcl,
-  PXLDelphi_Core;
+  rtl;
 
 contains
-  PXL.Comps.VCL in '..\..\Sources\PXL.Comps.VCL.pas',
-  PXL.Comps.VCL.View in '..\..\Sources\PXL.Comps.VCL.View.pas';
+  PXL.Comps.Assets in '..\..\..\Sources\PXL.Comps.Assets.pas',
+  PXL.Comps.AtlasImage in '..\..\..\Sources\PXL.Comps.AtlasImage.pas',
+  PXL.Comps.Core in '..\..\..\Sources\PXL.Comps.Core.pas',
+  PXL.Comps.Surfaces in '..\..\..\Sources\PXL.Comps.Surfaces.pas',
+  PXL.Comps.Surfaces.Process.Generators in '..\..\..\Sources\PXL.Comps.Surfaces.Process.Generators.pas',
+  PXL.Comps.Surfaces.Process in '..\..\..\Sources\PXL.Comps.Surfaces.Process.pas';
 
 end.

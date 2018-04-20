@@ -12,6 +12,9 @@
         <Projects Include="Demo\Surface\SurfaceComp.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Package\Delphi10.2\PXLDelphi_Core.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +50,23 @@
     <Target Name="SurfaceComp:Make">
         <MSBuild Projects="Demo\Surface\SurfaceComp.dproj" Targets="Make"/>
     </Target>
+    <Target Name="PXLDelphi_Core">
+        <MSBuild Projects="Package\Delphi10.2\PXLDelphi_Core.dproj"/>
+    </Target>
+    <Target Name="PXLDelphi_Core:Clean">
+        <MSBuild Projects="Package\Delphi10.2\PXLDelphi_Core.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PXLDelphi_Core:Make">
+        <MSBuild Projects="Package\Delphi10.2\PXLDelphi_Core.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="PXLDelphiRT_VCL;BasicComp;SurfaceComp"/>
+        <CallTarget Targets="PXLDelphiRT_VCL;BasicComp;SurfaceComp;PXLDelphi_Core"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="PXLDelphiRT_VCL:Clean;BasicComp:Clean;SurfaceComp:Clean"/>
+        <CallTarget Targets="PXLDelphiRT_VCL:Clean;BasicComp:Clean;SurfaceComp:Clean;PXLDelphi_Core:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="PXLDelphiRT_VCL:Make;BasicComp:Make;SurfaceComp:Make"/>
+        <CallTarget Targets="PXLDelphiRT_VCL:Make;BasicComp:Make;SurfaceComp:Make;PXLDelphi_Core:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

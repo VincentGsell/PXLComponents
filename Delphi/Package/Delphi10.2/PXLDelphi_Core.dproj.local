@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.496,=rtl.dcp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.744,=E:\Temp\github\PXLComponents.git\trunk\Sources\PXL.Comps.Assets.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.751,=E:\Temp\github\PXLComponents.git\trunk\Sources\PXL.Comps.Surfaces.Process.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.749,=E:\Temp\github\PXLComponents.git\trunk\Sources\PXL.Comps.Surfaces.Process.Generators.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.987,E:\Temp\github\PXLComponents.git\trunk\Delphi\Package\Delphi10.2\PXLDelphi_Core.dproj=\\Merlin\gsellv$\My Documents\Embarcadero\Studio\Projects\Package1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.745,=E:\Temp\github\PXLComponents.git\trunk\Sources\PXL.Comps.AtlasImage.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.748,=E:\Temp\github\PXLComponents.git\trunk\Sources\PXL.Comps.Surfaces.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.747,=E:\Temp\github\PXLComponents.git\trunk\Sources\PXL.Comps.Core.pas</Transaction>
+  </Transactions>
+</BorlandProject>

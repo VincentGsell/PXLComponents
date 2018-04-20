@@ -34784,4 +34784,12 @@ object Form1: TForm1
     Left = 112
     Top = 32
   end
+  object PXLSurface1: TPXLSurface
+    Width = 32
+    Height = 32
+    PixelFormat = A8R8G8B8
+    Processors = <>
+    Left = 280
+    Top = 192
+  end
 end

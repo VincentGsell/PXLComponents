@@ -12,13 +12,14 @@ uses
   PXL.Comps.VCL,
   PXL.Comps.Surfaces,
   PXL.Comps.Assets,
-  PXL.Comps.AtlasImage;
+  PXL.Comps.AtlasImage, PXL.Comps.Surfaces.Process;
 
 type
   TForm1 = class(TForm)
     PXLAssets1: TPXLAssets;
     PXLEngine1: TPXLEngine;
     PXLAtlasImage1: TPXLAtlasImage;
+    PXLSurface1: TPXLSurface;
     procedure PXLEngine1Render(Sender: TObject);
     procedure PXLEngine1Process(Sender: TObject);
     procedure PXLEngine1Init(Sender: TObject);
@@ -154,6 +155,7 @@ begin
   PXLEngine1.SystemDrawText(4,20,'Technology: ' + PXLEngine1.DeviceTechDescription);
   PXLEngine1.SystemDrawText(fx,fy+15,'click !');
   PXLEngine1.SystemDrawText(fx,fy+30,'(' + IntToStr(Round(Fx))+','+IntToStr(Round(Fy))+')');
+
 end;
 
 end.
