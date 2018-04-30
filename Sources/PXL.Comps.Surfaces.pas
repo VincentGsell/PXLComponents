@@ -21,6 +21,7 @@ Const
 Type
 
 //TPixelSurfaceCanvas is an "Hacked" TSRTCanvas to perfom same behaviour on TPixelSurface (Treated here as a DIB).
+// Internal use only.
 TPixelSurfaceCanvas = Class(TSRTCanvas)
 Protected
   function BeginDraw: Boolean; override;
@@ -28,6 +29,8 @@ Protected
 Public
   Function Surface : TPixelSurface;
   Constructor Create(aSurface : TPixelSurface); Reintroduce;
+
+  Procedure SetSize(aWidth, aHeight : Integer);
 
   Procedure DrawImage( const TargetSurface : TPixelSurface;
                                          const Source : TPixelSurface;
@@ -134,6 +137,7 @@ end;
 procedure TCustomPXLSurface.SetHeight(const Value: Integer);
 begin
   surface.SetSize(FSurface.Width,Value);
+  Canvas.SetSize(FSurface.Width,FSurface.Height);
 end;
 
 procedure TCustomPXLSurface.SetPixelFormat(const Value: TPixelFormat);
@@ -144,6 +148,7 @@ end;
 procedure TCustomPXLSurface.SetWidth(const Value: Integer);
 begin
   surface.SetSize(Value,FSurface.Height);
+  Canvas.SetSize(FSurface.Width,FSurface.Height);
 end;
 
 { TPixelSurfaceCanvas }
@@ -159,6 +164,7 @@ begin
   Assert(Assigned(aSurface));
   Inherited Create(nil);
   FSurface := aSurface;
+  SetSize(aSurface.Width,aSurface.Height);
 end;
 
 procedure TPixelSurfaceCanvas.DrawImage( const TargetSurface : TPixelSurface;
@@ -209,6 +215,11 @@ end;
 
 procedure TPixelSurfaceCanvas.EndDraw;
 begin
+end;
+
+procedure TPixelSurfaceCanvas.SetSize(aWidth, aHeight: Integer);
+begin
+  FClipRect := IntRect(0,0,aWidth,aHeight);
 end;
 
 function TPixelSurfaceCanvas.Surface: TPixelSurface;
