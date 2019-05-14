@@ -2,8 +2,8 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 656
-  ClientWidth = 1051
+  ClientHeight = 759
+  ClientWidth = 1058
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object Form2: TForm2
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 1045
-    Height = 650
+    Width = 1052
+    Height = 753
     ParentCustomHint = False
     StandaloneSurface = False
     Surface = PXLSurface1
@@ -28,8 +28,8 @@ object Form2: TForm2
     OffsetX = 0
     OffsetY = 0
     Align = alClient
-    ExplicitWidth = 502
-    ExplicitHeight = 567
+    ExplicitLeft = 8
+    ExplicitTop = -2
   end
   object PXLSurface1: TPXLSurface
     Width = 512
@@ -49,19 +49,19 @@ object Form2: TForm2
         Enabled = True
       end
       item
-        ProcessorUnit = PXLProcessorDrawingLayer1
-        Enabled = True
-      end
-      item
         ProcessorUnit = PXLSurfaceGeneratorGourault1
         Enabled = True
       end
       item
         ProcessorUnit = PXLSurfaceGeneratorPlasma1
         Enabled = True
+      end
+      item
+        ProcessorUnit = PXLProcessorDrawingLayer1
+        Enabled = True
       end>
     Left = 72
-    Top = 128
+    Top = 48
   end
   object PXLProcessorImage1: TPXLProcessorImage
     DisplayName = 'Koala'#39's Image '
@@ -19755,8 +19755,8 @@ object Form2: TForm2
           E7FFC33FFF0F6168C94238188EB20000000049454E44AE426082}
         DummyAssetType = 3
       end>
-    Left = 160
-    Top = 232
+    Left = 144
+    Top = 48
   end
   object PXLProcessorImage2: TPXLProcessorImage
     DisplayName = 'Lenna'#39's image'
@@ -19770,16 +19770,6 @@ object Form2: TForm2
     Left = 72
     Top = 328
   end
-  object PXLSurfaceProcessorBackGround1: TPXLSurfaceProcessorBackGround
-    DisplayName = 'Unnamed'
-    ColorTopLeft = 'FF000000'
-    ColorTopRight = 'FF000000'
-    ColorBottomLeft = 'FFFFFFFF'
-    ColorBottomRight = 'FF000000'
-    ColorMode = TopLeftToBottomLeft
-    Left = 72
-    Top = 184
-  end
   object PXLSurfaceGeneratorGourault1: TPXLSurfaceGeneratorGourault
     DisplayName = 'Unnamed'
     X = 460
@@ -19787,16 +19777,16 @@ object Form2: TForm2
     Width = 30
     Height = 400
     ColorTopLeftRed = 255
-    ColorTopLeftBlue = 255
+    ColorTopLeftBlue = 125
     ColorTopLeftGreen = 255
     ColorTopRightRed = 255
     ColorTopRightBlue = 255
     ColorTopRightGreen = 255
-    ColorBottomLeftRed = 0
+    ColorBottomLeftRed = 125
     ColorBottomLeftBlue = 0
     ColorBottomLeftGreen = 0
     ColorBottomRightRed = 0
-    ColorBottomRightBlue = 0
+    ColorBottomRightBlue = 125
     ColorBottomRightGreen = 0
     Left = 72
     Top = 384
@@ -19819,5 +19809,15 @@ object Form2: TForm2
     OnRender = PXLProcessorDrayingLayer1Render
     Left = 72
     Top = 280
+  end
+  object PXLSurfaceProcessorBackGround1: TPXLSurfaceProcessorBackGround
+    DisplayName = 'Unnamed'
+    ColorTopLeft = '00000000'
+    ColorTopRight = '00000000'
+    ColorBottomLeft = 'FF000000'
+    ColorBottomRight = 'FF000000'
+    ColorMode = AllFourth
+    Left = 72
+    Top = 168
   end
 end

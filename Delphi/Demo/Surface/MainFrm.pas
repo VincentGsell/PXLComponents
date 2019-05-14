@@ -16,10 +16,10 @@ type
     PXLProcessorImage1: TPXLProcessorImage;
     PXLAssets1: TPXLAssets;
     PXLProcessorImage2: TPXLProcessorImage;
-    PXLSurfaceProcessorBackGround1: TPXLSurfaceProcessorBackGround;
     PXLSurfaceGeneratorGourault1: TPXLSurfaceGeneratorGourault;
     PXLSurfaceGeneratorPlasma1: TPXLSurfaceGeneratorPlasma;
     PXLProcessorDrawingLayer1: TPXLProcessorDrawingLayer;
+    PXLSurfaceProcessorBackGround1: TPXLSurfaceProcessorBackGround;
     procedure PXLProcessorDrayingLayer1Render(Sender: TObject;
       Canvas: TPixelSurfaceCanvas);
   private
