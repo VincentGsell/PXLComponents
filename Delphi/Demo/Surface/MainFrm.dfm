@@ -28,8 +28,6 @@ object Form2: TForm2
     OffsetX = 0
     OffsetY = 0
     Align = alClient
-    ExplicitLeft = 8
-    ExplicitTop = -2
   end
   object PXLSurface1: TPXLSurface
     Width = 512
@@ -67,7 +65,7 @@ object Form2: TForm2
     DisplayName = 'Koala'#39's Image '
     Assets = PXLAssets1
     AssetUsualName = 'Koala'
-    Alpha = 100
+    Alpha = 255
     OffsetX = 0
     OffsetY = 0
     ScaleX = 1.000000000000000000
@@ -19759,7 +19757,7 @@ object Form2: TForm2
     Top = 48
   end
   object PXLProcessorImage2: TPXLProcessorImage
-    DisplayName = 'Lenna'#39's image'
+    DisplayName = 'Lenna'
     Assets = PXLAssets1
     AssetUsualName = 'Lenna'
     Alpha = 150
