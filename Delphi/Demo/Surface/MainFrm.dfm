@@ -28,6 +28,10 @@ object Form2: TForm2
     OffsetX = 0
     OffsetY = 0
     Align = alClient
+    ExplicitLeft = 243
+    ExplicitTop = 32
+    ExplicitWidth = 718
+    ExplicitHeight = 548
   end
   object PXLSurface1: TPXLSurface
     Width = 512
@@ -58,8 +62,8 @@ object Form2: TForm2
         ProcessorUnit = PXLProcessorDrawingLayer1
         Enabled = True
       end>
-    Left = 72
-    Top = 48
+    Left = 160
+    Top = 112
   end
   object PXLProcessorImage1: TPXLProcessorImage
     DisplayName = 'Koala'#39's Image '
@@ -19753,8 +19757,8 @@ object Form2: TForm2
           E7FFC33FFF0F6168C94238188EB20000000049454E44AE426082}
         DummyAssetType = 3
       end>
-    Left = 144
-    Top = 48
+    Left = 160
+    Top = 40
   end
   object PXLProcessorImage2: TPXLProcessorImage
     DisplayName = 'Lenna'

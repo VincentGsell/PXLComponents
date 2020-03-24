@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, PXL.Comps.Core, PXL.Comps.Surfaces,
   PXL.Comps.VCL, PXL.Comps.Assets, PXL.Comps.VCL.View,
   PXL.Comps.Surfaces.Process, Vcl.StdCtrls, Vcl.ExtCtrls,
-  PXL.Comps.Surfaces.Process.Generators;
+  PXL.Comps.Surfaces.Process.Generators, PXL.Comps.AtlasImage;
 
 type
   TForm2 = class(TForm)

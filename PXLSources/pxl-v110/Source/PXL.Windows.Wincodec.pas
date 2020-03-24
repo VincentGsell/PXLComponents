@@ -32,7 +32,19 @@ interface
 {$ENDIF}
 
 uses
-  ActiveX, Windows;
+  ActiveX, Windows, shlObj;
+
+type
+  PSHORT = ^SHORT;
+  PUSHORT = ^USHORT;
+  LONG = Int32;
+  PLONG = ^LONG;
+  PULONG = ^ULONG;
+  PLONGLONG = ^LONGLONG;
+  PULONGLONG = ^ULONGLONG;
+  PCWSTR = LPCWSTR;
+  PPCWSTR = ^PCWSTR;
+  PWSTR = PCWSTR;
 
 const
   WINCODEC_SDK_VERSION1 = $0236;

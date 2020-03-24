@@ -3,7 +3,8 @@
 	<Transactions>
     <Transaction>1899/12/30 00:00:00.000.356,C:\Users\Vincent\Documents\Embarcadero\Studio\Projects\Package1.dproj=E:\DATA\2017_GRIDSYSTEM\Experimental\PXL\Delphi\Components\Package\PXLDelphiRT.dproj</Transaction>
     <Transaction>1899/12/30 00:00:00.000.120,E:\DATA\2017_GRIDSYSTEM\Experimental\PXL\Delphi\Package\PXLDelphiRunTime.dproj=E:\DATA\2017_GRIDSYSTEM\Experimental\PXL\Delphi\Package\PXLDelphiRT_VCL.dproj</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.418,E:\DATA\2017_GRIDSYSTEM\Experimental\PXL\Delphi\Components\Package\PXLDelphiRT.dproj=E:\DATA\2017_GRIDSYSTEM\Experimental\PXL\Delphi\Components\Package\PXLDelphiRT_VCL.dproj</Transaction>
     <Transaction>1899/12/30 00:00:00.000.166,E:\DATA\2017_GRIDSYSTEM\Experimental\PXL\Delphi\Package\PXLDelphiRT_VCL.dproj=E:\DATA\2017_GRIDSYSTEM\Experimental\PXL\Delphi\Package\PXLDelphiRunTime.dproj</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.418,E:\DATA\2017_GRIDSYSTEM\Experimental\PXL\Delphi\Components\Package\PXLDelphiRT.dproj=E:\DATA\2017_GRIDSYSTEM\Experimental\PXL\Delphi\Components\Package\PXLDelphiRT_VCL.dproj</Transaction>
+    <Transaction>2020/01/28 10:10:08.000.514,=PXLDelphi_Core.dcp</Transaction>
   </Transactions>
 </BorlandProject>

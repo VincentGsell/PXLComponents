@@ -12,14 +12,13 @@ uses
   PXL.Comps.VCL,
   PXL.Comps.Surfaces,
   PXL.Comps.Assets,
-  PXL.Comps.AtlasImage, PXL.Comps.Surfaces.Process;
+  PXL.Comps.AtlasImage, PXL.Comps.Surfaces.Process, PXL.Comps.VCL.View;
 
 type
   TForm1 = class(TForm)
     PXLAssets1: TPXLAssets;
     PXLEngine1: TPXLEngine;
     PXLAtlasImage1: TPXLAtlasImage;
-    PXLSurface1: TPXLSurface;
     procedure PXLEngine1Render(Sender: TObject);
     procedure PXLEngine1Process(Sender: TObject);
     procedure PXLEngine1Init(Sender: TObject);

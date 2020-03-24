@@ -28,7 +28,8 @@ package PXLDelphi_Core;
 {$IMPLICITBUILD ON}
 
 requires
-  rtl;
+  rtl,
+  PXLPackage_RT_D103;
 
 contains
   PXL.Comps.Assets in '..\..\..\Sources\PXL.Comps.Assets.pas',

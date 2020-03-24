@@ -47,24 +47,6 @@ Published
   Property Active;
 End;
 
-TPXLSurface = Class(TCustomPXLSurfaceWithProcessor)
-Protected
-Public
-End;
-
-TPXLAtlasImage = Class(TCustomPXLAtlasImage)
-End;
-
-TPXLProcessorImage = Class(TCustomPXLSurfaceProcessorImage)
-End;
-
-
-TPXLProcessorDrawingLayer = Class(TCustomPXLSurfaceProcessorDrawingLayer)
-End;
-
-TPXLSurfaceProcessorBackGround = Class(TCustomPXLSurfaceProcessorBackGround)
-End;
-
 
 Procedure Register;
 
@@ -80,9 +62,7 @@ Uses
 
 Procedure Register;
 begin
-  RegisterComponents('PXL',[TPXLEngine, TPXLAtlasImage]);
-  RegisterComponents('PXL Surfaces',[TPXLSurface,TPXLAssets]);
-  RegisterComponents('PXL Processors',[TPXLSurfaceProcessorBackGround, TPXLProcessorImage,TPXLProcessorDrawingLayer]);
+  RegisterComponents('PXL',[TPXLEngine]);
 end;
 
 { TPXLEngine }

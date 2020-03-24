@@ -1,0 +1,117 @@
+package PXLPackage_RT_D103;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  fmx;
+
+contains
+  Jedi.Direct3D9 in '..\..\..\PXLSources\pxl-v110\Source\Jedi.Direct3D9.pas',
+  Jedi.Direct3D9.Types in '..\..\..\PXLSources\pxl-v110\Source\Jedi.Direct3D9.Types.pas',
+  PXL.Archives.Loading in '..\..\..\PXLSources\pxl-v110\Source\PXL.Archives.Loading.pas',
+  PXL.Archives in '..\..\..\PXLSources\pxl-v110\Source\PXL.Archives.pas',
+  PXL.Bitmaps in '..\..\..\PXLSources\pxl-v110\Source\PXL.Bitmaps.pas',
+  PXL.Canvas.DX7 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Canvas.DX7.pas',
+  PXL.Canvas.DX9 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Canvas.DX9.pas',
+  PXL.Canvas.DX11 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Canvas.DX11.pas',
+  PXL.Canvas.GL.GL1 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Canvas.GL.GL1.pas',
+  PXL.Canvas.GL in '..\..\..\PXLSources\pxl-v110\Source\PXL.Canvas.GL.pas',
+  PXL.Canvas in '..\..\..\PXLSources\pxl-v110\Source\PXL.Canvas.pas',
+  PXL.Canvas.SRT in '..\..\..\PXLSources\pxl-v110\Source\PXL.Canvas.SRT.pas',
+  PXL.Classes in '..\..\..\PXLSources\pxl-v110\Source\PXL.Classes.pas',
+  PXL.Consts in '..\..\..\PXLSources\pxl-v110\Source\PXL.Consts.pas',
+  PXL.Data in '..\..\..\PXLSources\pxl-v110\Source\PXL.Data.pas',
+  PXL.Devices.DX7 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Devices.DX7.pas',
+  PXL.Devices.DX9 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Devices.DX9.pas',
+  PXL.Devices.DX11 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Devices.DX11.pas',
+  PXL.Devices.FM.DX9 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Devices.FM.DX9.pas',
+  PXL.Devices.FM.DX11 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Devices.FM.DX11.pas',
+  PXL.Devices.GL.Win in '..\..\..\PXLSources\pxl-v110\Source\PXL.Devices.GL.Win.pas',
+  PXL.Devices in '..\..\..\PXLSources\pxl-v110\Source\PXL.Devices.pas',
+  PXL.Devices.SRT in '..\..\..\PXLSources\pxl-v110\Source\PXL.Devices.SRT.pas',
+  PXL.Drawables in '..\..\..\PXLSources\pxl-v110\Source\PXL.Drawables.pas',
+  PXL.Events in '..\..\..\PXLSources\pxl-v110\Source\PXL.Events.pas',
+  PXL.FMBridge in '..\..\..\PXLSources\pxl-v110\Source\PXL.FMBridge.pas',
+  PXL.Fonts in '..\..\..\PXLSources\pxl-v110\Source\PXL.Fonts.pas',
+  PXL.Formats in '..\..\..\PXLSources\pxl-v110\Source\PXL.Formats.pas',
+  PXL.ImageFormats.Auto in '..\..\..\PXLSources\pxl-v110\Source\PXL.ImageFormats.Auto.pas',
+  PXL.ImageFormats in '..\..\..\PXLSources\pxl-v110\Source\PXL.ImageFormats.pas',
+  PXL.ImageFormats.TGA in '..\..\..\PXLSources\pxl-v110\Source\PXL.ImageFormats.TGA.pas',
+  PXL.ImageFormats.WIC in '..\..\..\PXLSources\pxl-v110\Source\PXL.ImageFormats.WIC.pas',
+  PXL.Images in '..\..\..\PXLSources\pxl-v110\Source\PXL.Images.pas',
+  PXL.Lists in '..\..\..\PXLSources\pxl-v110\Source\PXL.Lists.pas',
+  PXL.Logs in '..\..\..\PXLSources\pxl-v110\Source\PXL.Logs.pas',
+  PXL.NetComs in '..\..\..\PXLSources\pxl-v110\Source\PXL.NetComs.pas',
+  PXL.Palettes in '..\..\..\PXLSources\pxl-v110\Source\PXL.Palettes.pas',
+  PXL.Providers.Auto in '..\..\..\PXLSources\pxl-v110\Source\PXL.Providers.Auto.pas',
+  PXL.Providers.DX7 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Providers.DX7.pas',
+  PXL.Providers.DX9 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Providers.DX9.pas',
+  PXL.Providers.DX11 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Providers.DX11.pas',
+  PXL.Providers.FM.DX9 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Providers.FM.DX9.pas',
+  PXL.Providers.FM.DX11 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Providers.FM.DX11.pas',
+  PXL.Providers.GL in '..\..\..\PXLSources\pxl-v110\Source\PXL.Providers.GL.pas',
+  PXL.Providers in '..\..\..\PXLSources\pxl-v110\Source\PXL.Providers.pas',
+  PXL.Providers.SRT in '..\..\..\PXLSources\pxl-v110\Source\PXL.Providers.SRT.pas',
+  PXL.Rasterizer.SRT in '..\..\..\PXLSources\pxl-v110\Source\PXL.Rasterizer.SRT.pas',
+  PXL.Scripts in '..\..\..\PXLSources\pxl-v110\Source\PXL.Scripts.pas',
+  PXL.Sensors.Types in '..\..\..\PXLSources\pxl-v110\Source\PXL.Sensors.Types.pas',
+  PXL.Shaders.DX11 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Shaders.DX11.pas',
+  PXL.Shaders.GL in '..\..\..\PXLSources\pxl-v110\Source\PXL.Shaders.GL.pas',
+  PXL.Surfaces.GDI in '..\..\..\PXLSources\pxl-v110\Source\PXL.Surfaces.GDI.pas',
+  PXL.Surfaces in '..\..\..\PXLSources\pxl-v110\Source\PXL.Surfaces.pas',
+  PXL.SwapChains.DX7 in '..\..\..\PXLSources\pxl-v110\Source\PXL.SwapChains.DX7.pas',
+  PXL.SwapChains.DX9 in '..\..\..\PXLSources\pxl-v110\Source\PXL.SwapChains.DX9.pas',
+  PXL.SwapChains.DX11 in '..\..\..\PXLSources\pxl-v110\Source\PXL.SwapChains.DX11.pas',
+  PXL.SwapChains in '..\..\..\PXLSources\pxl-v110\Source\PXL.SwapChains.pas',
+  PXL.Textures.DX7 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Textures.DX7.pas',
+  PXL.Textures.DX9 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Textures.DX9.pas',
+  PXL.Textures.DX11 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Textures.DX11.pas',
+  PXL.Textures.GL in '..\..\..\PXLSources\pxl-v110\Source\PXL.Textures.GL.pas',
+  PXL.Textures in '..\..\..\PXLSources\pxl-v110\Source\PXL.Textures.pas',
+  PXL.Textures.SRT in '..\..\..\PXLSources\pxl-v110\Source\PXL.Textures.SRT.pas',
+  PXL.Timing in '..\..\..\PXLSources\pxl-v110\Source\PXL.Timing.pas',
+  PXL.TypeDef in '..\..\..\PXLSources\pxl-v110\Source\PXL.TypeDef.pas',
+  PXL.Types.DX7 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Types.DX7.pas',
+  PXL.Types.DX9 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Types.DX9.pas',
+  PXL.Types.DX11 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Types.DX11.pas',
+  PXL.Types.GL in '..\..\..\PXLSources\pxl-v110\Source\PXL.Types.GL.pas',
+  PXL.Types in '..\..\..\PXLSources\pxl-v110\Source\PXL.Types.pas',
+  PXL.Types.SRT in '..\..\..\PXLSources\pxl-v110\Source\PXL.Types.SRT.pas',
+  PXL.Windows.D3D7 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Windows.D3D7.pas',
+  PXL.Windows.D3D10 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Windows.D3D10.pas',
+  PXL.Windows.D3D11 in '..\..\..\PXLSources\pxl-v110\Source\PXL.Windows.D3D11.pas',
+  PXL.Windows.D3DCommon in '..\..\..\PXLSources\pxl-v110\Source\PXL.Windows.D3DCommon.pas',
+  PXL.Windows.DDraw in '..\..\..\PXLSources\pxl-v110\Source\PXL.Windows.DDraw.pas',
+  PXL.Windows.DXGI in '..\..\..\PXLSources\pxl-v110\Source\PXL.Windows.DXGI.pas',
+  PXL.Windows.UART in '..\..\..\PXLSources\pxl-v110\Source\PXL.Windows.UART.pas',
+  PXL.Windows.Wincodec in '..\..\..\PXLSources\pxl-v110\Source\PXL.Windows.Wincodec.pas',
+  PXL.XML in '..\..\..\PXLSources\pxl-v110\Source\PXL.XML.pas',
+  PXL.Boards.Types in '..\..\..\PXLSources\pxl-v110\Source\PXL.Boards.Types.pas';
+
+end.

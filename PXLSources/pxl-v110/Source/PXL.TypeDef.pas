@@ -27,7 +27,7 @@ type
     PtrUInt = NativeUInt;
   {$ELSE}
     PtrInt = Integer;
-    PtrUInt = Cardinal;
+    PtrUInt = cardinal;
   {$ENDIF}
 {$ENDIF}
 

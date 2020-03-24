@@ -68,8 +68,18 @@ Published
   Property TextureCount : Cardinal read GetTextureCount;
 End;
 
+TPXLAtlasImage = Class(TCustomPXLAtlasImage)
+End;
+
+Procedure Register;
+
+
 Implementation
 
+Procedure Register;
+begin
+  RegisterComponents('PXL',[TPXLAtlasImage]);
+end;
 
 { TCustomPXLAtlasImage }
 

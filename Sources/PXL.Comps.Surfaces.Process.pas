@@ -148,11 +148,32 @@ Published
   Property Processors : TPXLSurfaceProcessorCollection read FProcCol Write FProcCol;
 end;
 
+TPXLSurface = Class(TCustomPXLSurfaceWithProcessor)
+Protected
+Public
+End;
+
+TPXLProcessorImage = Class(TCustomPXLSurfaceProcessorImage)
+End;
+
+
+TPXLProcessorDrawingLayer = Class(TCustomPXLSurfaceProcessorDrawingLayer)
+End;
+
+TPXLSurfaceProcessorBackGround = Class(TCustomPXLSurfaceProcessorBackGround)
+End;
+
+Procedure Register;
 
 implementation
 
 Uses PXL.ImageFormats,
      PXL.ImageFormats.Auto;
+
+Procedure Register;
+begin
+  RegisterComponents('PXL Processors',[TPXLSurfaceProcessorBackGround, TPXLProcessorImage,TPXLProcessorDrawingLayer]);
+end;
 
 
 constructor TPXLSurfaceProcessorCollection.Create(CollOwner: TComponent);

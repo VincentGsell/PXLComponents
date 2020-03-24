@@ -65,10 +65,10 @@ end;
 constructor TSRTDeviceContext.Create(const ADevice: TCustomDevice; out AWriter: TSRTDeviceContextWriter);
 begin
   inherited Create(ADevice);
-
   AWriter := TWriter.Create(Self);
 end;
 
 {$ENDREGION}
 
 end.
+

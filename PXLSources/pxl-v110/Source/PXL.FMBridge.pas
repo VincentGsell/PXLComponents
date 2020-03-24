@@ -49,6 +49,7 @@ implementation
 uses
 {$IFDEF MSWINDOWS}
   PXL.Providers.FM.DX9, PXL.Providers.FM.DX11, FMX.Context.DX11,
+  PXL.Providers.SRT,
 {$ENDIF}
 
 {$IF DEFINED(MACOS) AND NOT DEFINED(IOS)}

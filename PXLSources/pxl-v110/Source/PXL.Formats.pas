@@ -574,6 +574,7 @@ begin
       begin
         DestValue^ := PIntColor(SourceValue)^ or $FF000000;
 
+
         Inc(PtrUInt(SourceValue), SizeOf(TIntColor));
         Inc(DestValue);
       end;

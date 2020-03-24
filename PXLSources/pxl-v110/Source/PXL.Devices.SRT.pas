@@ -17,7 +17,7 @@ interface
 
 { Enable the following option to render directly to form's surface (as with any other provider) by using GDI.
   Note that this option works only on Windows. }
-{.$DEFINE SRT_RENDER_TO_GDI}
+{$DEFINE SRT_RENDER_TO_GDI}
 
 {$IF DEFINED(MSWINDOWS) AND DEFINED(SRT_RENDER_TO_GDI)}
   {$DEFINE SRT_RENDER_TO_GDI_ENABLED}
@@ -25,6 +25,7 @@ interface
 
 uses
 {$IFDEF SRT_RENDER_TO_GDI_ENABLED}
+  PXL.TypeDef,
   PXL.Surfaces.GDI,
 {$ENDIF}
 
@@ -162,12 +163,12 @@ begin
 end;
 
 function TSRTDevice.BeginScene(const SwapChainIndex: Integer): Boolean;
-{$IFNDEF SRT_RENDER_TO_GDI_ENABLED}
+{$IFDEF SRT_RENDER_TO_GDI_ENABLED}
 var
   SwapChainInfo: PSwapChainInfo;
 {$ENDIF}
 begin
-{$IFDEF SRT_RENDER_TO_GDI_ENABLED}
+{$IFNDEF SRT_RENDER_TO_GDI_ENABLED}
   Result := SwapChainIndex = 0;
 {$ELSE}
   SwapChainInfo := SwapChains[SwapChainIndex];
@@ -207,9 +208,8 @@ begin
   finally
     ReleaseDC(SwapChainInfo.WindowHandle, DestDC);
   end;
-{$ENDIF}
-
   Result := True;
+{$ENDIF}
 end;
 
 end.

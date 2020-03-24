@@ -835,7 +835,7 @@ begin
           Break;
 
         if FSystemCore <> nil then
-          FSystemCore.DelayUS(InterimSleepTime);
+          FSystemCore.Delay(InterimSleepTime);
 
         Continue;
       end;

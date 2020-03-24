@@ -40,7 +40,6 @@ uses
 constructor TFireGLDevice.Create(const AProvider: TCustomDeviceProvider);
 begin
   inherited;
-
   FContext := TGLDeviceContext.Create(Self);
 
   FTechnology := TDeviceTechnology.OpenGL;

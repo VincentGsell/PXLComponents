@@ -26,17 +26,17 @@ type
     FSystemPath: StdString;
     FHandle: TUntypedHandle;
 
-    FBaudRate: Integer;
-    FBitsPerWord: Integer;
+    FBaudRate: Cardinal;
+    FBitsPerWord: Cardinal;
     FParity: TParity;
     FStopBits: TStopBits;
 
     procedure UpdateCommState;
   protected
-    function GetBaudRate: Integer; override;
-    procedure SetBaudRate(const Value: Integer); override;
-    function GetBitsPerWord: Integer; override;
-    procedure SetBitsPerWord(const Value: Integer); override;
+    function GetBaudRate: Cardinal; override;
+    procedure SetBaudRate(const Value: Cardinal); override;
+    function GetBitsPerWord: Cardinal; override;
+    procedure SetBitsPerWord(const Value: Cardinal); override;
     function GetParity: TParity; override;
     procedure SetParity(const Value: TParity); override;
     function GetStopBits: TStopBits; override;
@@ -45,15 +45,15 @@ type
     constructor Create(const ASystemPath: StdString); // e.g. "\\.\COM1"
     destructor Destroy; override;
 
-    function Read(const Buffer: Pointer; const BufferSize: Integer): Integer; override;
-    function Write(const Buffer: Pointer; const BufferSize: Integer): Integer; override;
+    function Read(const Buffer: Pointer; const BufferSize: Cardinal): Cardinal; override;
+    function Write(const Buffer: Pointer; const BufferSize: Cardinal): Cardinal; override;
     procedure Flush; override;
 
     property SystemPath: StdString read FSystemPath;
     property Handle: TUntypedHandle read FHandle;
 
-    property BaudRate: Integer read FBaudRate write SetBaudRate;
-    property BitsPerWord: Integer read FBitsPerWord write SetBitsPerWord;
+    property BaudRate: Cardinal read FBaudRate write SetBaudRate;
+    property BitsPerWord: Cardinal read FBitsPerWord write SetBitsPerWord;
     property Parity: TParity read FParity write SetParity;
     property StopBits: TStopBits read FStopBits write SetStopBits;
   end;
@@ -86,7 +86,7 @@ const
 
 constructor TWinUART.Create(const ASystemPath: StdString);
 begin
-  inherited Create;
+  inherited Create(nil);
 
   FSystemPath := ASystemPath;
 
@@ -152,12 +152,12 @@ begin
     raise EWinUARTSetCommTimeouts.CreateFmt(SCannotSetCommTimeouts, [FSystemPath]);
 end;
 
-function TWinUART.GetBaudRate: Integer;
+function TWinUART.GetBaudRate: Cardinal;
 begin
   Result := FBaudRate;
 end;
 
-procedure TWinUART.SetBaudRate(const Value: Integer);
+procedure TWinUART.SetBaudRate(const Value: Cardinal);
 begin
   if FBaudRate <> Value then
   begin
@@ -166,12 +166,12 @@ begin
   end;
 end;
 
-function TWinUART.GetBitsPerWord: Integer;
+function TWinUART.GetBitsPerWord: Cardinal;
 begin
   Result := FBitsPerWord;
 end;
 
-procedure TWinUART.SetBitsPerWord(const Value: Integer);
+procedure TWinUART.SetBitsPerWord(const Value: Cardinal);
 begin
   if FBitsPerWord <> Value then
   begin
@@ -208,7 +208,7 @@ begin
   end;
 end;
 
-function TWinUART.Read(const Buffer: Pointer; const BufferSize: Integer): Integer;
+function TWinUART.Read(const Buffer: Pointer; const BufferSize: Cardinal): Cardinal;
 var
   BytesRead: Cardinal;
 begin
@@ -221,7 +221,7 @@ begin
   Result := BytesRead;
 end;
 
-function TWinUART.Write(const Buffer: Pointer; const BufferSize: Integer): Integer;
+function TWinUART.Write(const Buffer: Pointer; const BufferSize: Cardinal): Cardinal;
 var
   BytesWritten: Cardinal;
 begin

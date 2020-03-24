@@ -6,13 +6,10 @@
         <Projects Include="Package\Delphi10.2\PXLDelphiRT_VCL.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Demo\Basic\BasicComp.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Demo\Surface\SurfaceComp.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="Package\Delphi10.2\PXLDelphi_Core.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Package\Delphi103\PXLPackage_RT_D103.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -32,24 +29,6 @@
     <Target Name="PXLDelphiRT_VCL:Make">
         <MSBuild Projects="Package\Delphi10.2\PXLDelphiRT_VCL.dproj" Targets="Make"/>
     </Target>
-    <Target Name="BasicComp">
-        <MSBuild Projects="Demo\Basic\BasicComp.dproj"/>
-    </Target>
-    <Target Name="BasicComp:Clean">
-        <MSBuild Projects="Demo\Basic\BasicComp.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="BasicComp:Make">
-        <MSBuild Projects="Demo\Basic\BasicComp.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="SurfaceComp">
-        <MSBuild Projects="Demo\Surface\SurfaceComp.dproj"/>
-    </Target>
-    <Target Name="SurfaceComp:Clean">
-        <MSBuild Projects="Demo\Surface\SurfaceComp.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="SurfaceComp:Make">
-        <MSBuild Projects="Demo\Surface\SurfaceComp.dproj" Targets="Make"/>
-    </Target>
     <Target Name="PXLDelphi_Core">
         <MSBuild Projects="Package\Delphi10.2\PXLDelphi_Core.dproj"/>
     </Target>
@@ -59,14 +38,23 @@
     <Target Name="PXLDelphi_Core:Make">
         <MSBuild Projects="Package\Delphi10.2\PXLDelphi_Core.dproj" Targets="Make"/>
     </Target>
+    <Target Name="PXLPackage_RT_D103">
+        <MSBuild Projects="Package\Delphi103\PXLPackage_RT_D103.dproj"/>
+    </Target>
+    <Target Name="PXLPackage_RT_D103:Clean">
+        <MSBuild Projects="Package\Delphi103\PXLPackage_RT_D103.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PXLPackage_RT_D103:Make">
+        <MSBuild Projects="Package\Delphi103\PXLPackage_RT_D103.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="PXLDelphiRT_VCL;BasicComp;SurfaceComp;PXLDelphi_Core"/>
+        <CallTarget Targets="PXLDelphiRT_VCL;PXLDelphi_Core;PXLPackage_RT_D103"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="PXLDelphiRT_VCL:Clean;BasicComp:Clean;SurfaceComp:Clean;PXLDelphi_Core:Clean"/>
+        <CallTarget Targets="PXLDelphiRT_VCL:Clean;PXLDelphi_Core:Clean;PXLPackage_RT_D103:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="PXLDelphiRT_VCL:Make;BasicComp:Make;SurfaceComp:Make;PXLDelphi_Core:Make"/>
+        <CallTarget Targets="PXLDelphiRT_VCL:Make;PXLDelphi_Core:Make;PXLPackage_RT_D103:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
