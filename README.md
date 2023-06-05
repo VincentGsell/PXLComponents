@@ -37,11 +37,9 @@ This lib should be, on term , available for all PXL platform, starting compiler 
 ## ScreenShots : Delphi 10.2 IDE
 
 PXLEngine main component
-  ![Alt text](/../master/Ressources/PXLEngineComp.png?raw=true "PXLEngine component in all its glory")
+  ![Alt text](/../master/Ressources/PXLEngineComp.png?raw=true "PXLEngine component")
 
 PXLEngine Device Option
-  ![Alt text](/../master/Ressources/PXLEngineDeviceOptionComp.png?raw=true "PXLEngine component in all its glory")
+  ![Alt text](/../master/Ressources/PXLEngineDeviceOptionComp.png?raw=true "PXLEngine component)
 
-PXLSurface component overview, with its layout presentation
-  ![Alt text](/../master/Ressources/PXLSurfaceComp.png?raw=true "PXLEngine component in all its glory")
   
