@@ -113,7 +113,15 @@ End;
 
 Function ConvertMemoryAmountAsString(amount : Int64) : String;
 
+Procedure Register;
+
 implementation
+
+Procedure Register;
+begin
+  RegisterComponents('PXL',[TPXLAssets]);
+end;
+
 
 
   function ConvertMemoryAmountAsString(amount : Int64) : String;

@@ -20,6 +20,7 @@ type
     PXLSurfaceGeneratorPlasma1: TPXLSurfaceGeneratorPlasma;
     PXLProcessorDrawingLayer1: TPXLProcessorDrawingLayer;
     PXLSurfaceProcessorBackGround1: TPXLSurfaceProcessorBackGround;
+    PXLEngine1: TPXLEngine;
     procedure PXLProcessorDrayingLayer1Render(Sender: TObject;
       Canvas: TPixelSurfaceCanvas);
   private

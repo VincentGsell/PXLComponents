@@ -77,9 +77,6 @@ implementation
 
 { TCustomPXLSurface }
 
-
-{ TCustomPXLSurface }
-
 constructor TCustomPXLSurface.Create(AOwner: TComponent);
 begin
   inherited;

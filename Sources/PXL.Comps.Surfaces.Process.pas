@@ -172,7 +172,7 @@ Uses PXL.ImageFormats,
 
 Procedure Register;
 begin
-  RegisterComponents('PXL Processors',[TPXLSurfaceProcessorBackGround, TPXLProcessorImage,TPXLProcessorDrawingLayer]);
+  RegisterComponents('PXL Processors',[TPXLSurface, TPXLSurfaceProcessorBackGround, TPXLProcessorImage,TPXLProcessorDrawingLayer]);
 end;
 
 
