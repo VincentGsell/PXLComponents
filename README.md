@@ -40,6 +40,6 @@ PXLEngine main component
   ![Alt text](/../master/Ressources/PXLEngineComp.png?raw=true "PXLEngine component")
 
 PXLEngine Device Option
-  ![Alt text](/../master/Ressources/PXLEngineDeviceOptionComp.png?raw=true "PXLEngine component)
+  ![Alt text](/../master/Ressources/PXLEngineDeviceOptionComp.png?raw=true "PXLEngine device choice component")
 
   
